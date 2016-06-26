@@ -3,7 +3,7 @@ language: c
 compiler:
   - clang
   - gcc
-  - gcc -m32
+  - 'gcc -m32'
 
 install:
   - sudo apt-get update
