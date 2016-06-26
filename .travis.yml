@@ -1,0 +1,14 @@
+language: c
+
+compiler:
+  - clang
+  - gcc
+  - gcc -m32
+
+install:
+  - sudo apt-get update
+  - apt-cache search zlib
+  - apt-cache search gcc-multilib
+
+script:
+  - make
