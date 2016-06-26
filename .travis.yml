@@ -6,7 +6,7 @@ compiler:
 
 env:
   -
-  - ARCHFLAGS='-m32'
+  - CFLAGS='-m32'
 
 install:
   - sudo apt-get update
