@@ -1,6 +1,7 @@
 
 
 
+CFLAGS += $(ARCHFLAGS)
 CFLAGS += -g -O3 -Wall -Wextra -pedantic -ansi
 
 
@@ -10,7 +11,7 @@ all:
 	@file hello
 	@echo
 
-ifeq (,$(findstring m32, $(CFLAGS))
+ifndef ARCHFLAGS
 	@echo "AAA" $(CC)
 endif
 	@echo "BBB" $(CC)
