@@ -15,3 +15,6 @@ ifneq ($(CC), gcc -m32)
 endif
 	@echo "BBB" $(CC)
 	@echo "CCC"
+
+clean:
+	@rm -f hello
