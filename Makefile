@@ -10,11 +10,10 @@ all:
 	@file hello
 	@echo
 
-ifneq ($(CC), gcc -m32)
+ifeq (,$(findstring m32, $(CFLAGS))
 	@echo "AAA" $(CC)
 endif
 	@echo "BBB" $(CC)
-	@echo "CCC"
 
 clean:
 	@rm -f hello
