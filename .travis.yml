@@ -1,14 +1,13 @@
 language: c
 
 compiler:
-  - clang
   - gcc
-  - 'gcc -m32'
 
 install:
   - sudo apt-get update
-  - apt-cache search zlib
-  - apt-cache search gcc-multilib
+  - sudo apt-get install -y gcc-multilib
+  - sudo apt-get install -y zlib1g-dev
+  - sudo apt-get install -y zlib1g-dev:i386
 
 script:
   - make
