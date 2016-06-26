@@ -12,4 +12,4 @@ install:
 
 script:
   - make
-  - CFLAGS='=m32' make
+  - CFLAGS='-m32' make
