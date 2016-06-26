@@ -2,6 +2,10 @@ language: c
 
 compiler:
   - gcc
+  - clang
+
+env:
+  - CFLAGS='-m32'
 
 install:
   - sudo apt-get update
@@ -12,4 +16,3 @@ install:
 
 script:
   - make
-  - CFLAGS='-m32' make
