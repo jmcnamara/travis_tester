@@ -13,10 +13,13 @@ install:
   - sudo apt-get update
   - sudo apt-get install -y gcc-multilib
   - sudo apt-get install -y zlib1g-dev
-  - sudo apt-cache search minizip
-  - sudo apt-get install -y libminizip-dev
   - sudo apt-get install -y zlib1g-dev:i386
   - sudo apt-get install -y gcc
+
+  - wget http://mirrors.kernel.org/ubuntu/pool/universe/m/minizip/libminizip-dev_1.1-8_amd64.deb
+  - wget http://mirrors.kernel.org/ubuntu/pool/universe/m/minizip/libminizip1_1.1-8_amd64.deb
+  - sudo dpkg -i libminizip1_1.1-8_amd64.deb
+  - sudo dpkg -i libminizip-dev_1.1-8_amd64.deb
 
 script:
   - make
